@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#F4F6FA">
+  <meta name="description" content="Six free computer science tracks with hand-picked courses. Pick one, tick off what you finish.">
+  <title>trackpath – free computer science tracks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#tracks">Skip to tracks</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#top" aria-label="trackpath home">trackpath</a>
+      <nav aria-label="Main">
+        <a href="#tracks">Tracks</a>
+        <a href="#how">How it works</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <h1>Pick one computer science track and start it today.</h1>
+        <p class="lead">Six free paths, each with three hand-picked courses. Tick off what you finish and your progress stays in this browser.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#tracks">Browse the tracks</a>
+          <a class="btn btn-ghost" href="#how">How it works</a>
+        </div>
+      </div>
+
+      <aside class="progress" aria-label="Your progress">
+        <p class="progress-label">Your progress</p>
+        <p class="progress-num"><span id="doneNum">0</span> of <span id="totalNum">0</span> resources done</p>
+        <div class="meter" role="progressbar" aria-label="Resources completed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span id="bar"></span>
+        </div>
+        <button class="link-btn" id="reset" type="button">Reset progress</button>
+      </aside>
+    </section>
+
+    <section class="section wrap" id="tracks" aria-labelledby="tracks-title">
+      <div class="section-head">
+        <h2 id="tracks-title">Choose a track</h2>
+        <div class="filters" role="group" aria-label="Filter by level">
+          <button class="chip" type="button" data-level="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-level="Beginner" aria-pressed="false">Beginner</button>
+          <button class="chip" type="button" data-level="Intermediate" aria-pressed="false">Intermediate</button>
+        </div>
+      </div>
+      <p class="status" id="status" aria-live="polite"></p>
+      <div class="grid" id="trackGrid"></div>
+    </section>
+
+    <section class="section wrap" id="how" aria-labelledby="how-title">
+      <h2 id="how-title">How it works</h2>
+      <ol class="steps">
+        <li><span class="num">1</span><h3>Pick one track</h3><p>Choosing two at once is how people end up finishing neither.</p></li>
+        <li><span class="num">2</span><h3>Finish its first resource</h3><p>Open a track, follow the first link, and tick it off when you are done.</p></li>
+        <li><span class="num">3</span><h3>Build something small</h3><p>A tiny project that uses what you just learned is worth more than another video.</p></li>
+      </ol>
+    </section>
+
+    <section class="cta wrap" aria-labelledby="cta-title">
+      <div class="cta-box">
+        <h2 id="cta-title">Not sure? Start with Foundations.</h2>
+        <p>It covers the basics every other track builds on.</p>
+        <button class="btn btn-primary" type="button" data-open="foundations">Open Foundations</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>trackpath is a student project. Resources belong to their authors and were free when added.</p>
+    <p>&copy; <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
